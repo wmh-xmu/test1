@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>U2VC</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/cayman.css">
+    <style>
+      ul.b {list-style-type: square;}
+    </style>
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">U2VC</h1>
+      <h2 class="project-tagline">Fangkun Liu, Hui Wang, Renhua Peng, Chengshi Zheng, Xiaodong Li</h2>
+      <!-- <a href="" class="btn">Paper</a> -->
+      <!-- <a href="#" class="btn">Code</a> -->
+      <!-- <a href="#" class="btn">Download .tar.gz</a> -->
+    </section>
+
+    <section class="main-content">
+      <h1>
+      <a id="user-content-header-1" class="anchor" href="#header-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Title</h1>
+      <p style="font-size:30px;">U2VC: One-Shot Voice Conversion using Two-Level Nested U-Structure</p>
+  
+      <h1>
+      <a id="user-content-header-1" class="anchor" href="#header-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Description</h1>
+      <p>This page is for audio demo samples of our works. The demo samples show that our proposed approach improves the naturalness of the converted
+        whlile preserving the similarity between the converted speech and the target speech. It has to be noted that the model is only trained with VCTK corpus. All the speakers speak English 
+        in this corpus. <p>
+      <h1>
+      <a id="user-content-header-1" class="anchor" href="#header-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Demo</h1>
+      
+      
+      <h2>
+      <a id="user-content-header-2" class="anchor" href="#header-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Seen-to-seen conversion</h2>
+      
+      <style type="text/css">
+.tg  {border-collapse:collapse;border-color:#ccc;border-spacing:0;}
+.tg td{background-color:#fff;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
+  font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{background-color:#f0f0f0;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
+  font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-duar{background-color:#f9f9f9;border-color:#9b9b9b;font-weight:bold;text-align:center;vertical-align:middle}
+.tg .tg-bgm4{border-color:#9b9b9b;font-weight:bold;text-align:center;vertical-align:middle}
+.tg .tg-6k0d{border-color:#9b9b9b;text-align:center;vertical-align:middle}
+.tg .tg-1fos{background-color:#f9f9f9;border-color:#9b9b9b;text-align:center;vertical-align:middle}
+</style>
+      
+<table class="tg">
+<tbody>
+  <tr>
+    <td class="tg-bgm4" rowspan="2">Case</td>
+    <td class="tg-bgm4" rowspan="2">Source audio</td>
+    <td class="tg-bgm4" rowspan="2">Target voice</td>
+    <td class="tg-bgm4" colspan="3">Converted audio</td>
+  </tr>
+  <tr>
+    <td class="tg-duar">Propose</td>
+    <td class="tg-duar">AGAIN-VC</td>
+    <td class="tg-duar">AdaIN-VC</td>
+  </tr>
+  <tr>
+    <td class="tg-6k0d">Male to Male</td>
+    <td class="tg-6k0d">
+      <audio controls>
+        <source src="./audioforpaper\s2s\source\p247_004.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-6k0d">
+      <audio controls>
+        <source src="./audioforpaper\s2s\target\p251_010.wav" type="audio/wav">
+      </audio>    
+    </td>
+    <td class="tg-6k0d">
+      <audio controls>
+        <source src="./audioforpaper\s2s\U2VC\p247_004_to_p251_010.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-6k0d">
+      <audio controls>
+        <source src="./audioforpaper\s2s\AGAINVC\p247_004_to_p251_010.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-6k0d">
+      <audio controls>
+        <source src="./audioforpaper\s2s\AdaIN-VC\p247_004_to_p251_010.wav" type="audio/wav">
+      </audio>
+    </td>
+  </tr>
+  <tr>
+    <td class="tg-1fos">Male to Female</td>
+    <td class="tg-1fos">
+      <audio controls>
+        <source src="./audioforpaper\s2s\source\p226_002.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-1fos">
+      <audio controls>
+        <source src="./audioforpaper\s2s\target\p248_004.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-1fos">
+      <audio controls>
+        <source src="./audioforpaper\s2s\U2VC\p226_002_to_p248_004.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-1fos">
+      <audio controls>
+        <source src="./audioforpaper\s2s\AGAINVC\p226_002_to_p248_004.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-1fos">
+      <audio controls>
+        <source src="./audioforpaper\s2s\AdaIN-VC\p226_002_to_p248_004.wav" type="audio/wav">
+      </audio>
+    </td>
+  </tr>
+  <tr>
+    <td class="tg-6k0d">Female to Male</td>
+    <td class="tg-6k0d">
+      <audio controls>
+        <source src="./audioforpaper\s2s\source\p225_002.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-6k0d">
+      <audio controls>
+        <source src="./audioforpaper\s2s\target\p237_004.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-6k0d">
+      <audio controls>
+        <source src="./audioforpaper\s2s\U2VC\p225_002_to_p237_004.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-6k0d">
+      <audio controls>
+        <source src="./audioforpaper\s2s\AGAINVC\p225_002_to_p237_004.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-1fos">
+      <audio controls>
+        <source src="./audioforpaper\s2s\AdaIN-VC\p225_002_to_p237_004.wav" type="audio/wav">
+      </audio>
+    </td>
+  </tr>
+  <tr>
+    <td class="tg-1fos">Female to Female</td>
+    <td class="tg-1fos">
+      <audio controls>
+        <source src="./audioforpaper\s2s\source\p228_002.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-1fos">
+      <audio controls>
+        <source src="./audioforpaper\s2s\target\p248_010.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-1fos">
+      <audio controls>
+        <source src="./audioforpaper\s2s\U2VC\p228_002_to_p248_010.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-1fos">
+      <audio controls>
+        <source src="./audioforpaper\s2s\AGAINVC\p228_002_to_p248_010.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-1fos">
+      <audio controls>
+        <source src="./audioforpaper\s2s\AdaIN-VC\p228_002_to_p248_010.wav" type="audio/wav">
+      </audio>
+    </td>
+  </tr>
+</tbody>
+</table>
+
+<h2>
+      <a id="user-content-header-2" class="anchor" href="#header-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Uneen-to-unseen conversion</h2>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-color:#ccc;border-spacing:0;}
+.tg td{background-color:#fff;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
+  font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{background-color:#f0f0f0;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
+  font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-duar{background-color:#f9f9f9;border-color:#9b9b9b;font-weight:bold;text-align:center;vertical-align:middle}
+.tg .tg-bgm4{border-color:#9b9b9b;font-weight:bold;text-align:center;vertical-align:middle}
+.tg .tg-6k0d{border-color:#9b9b9b;text-align:center;vertical-align:middle}
+.tg .tg-1fos{background-color:#f9f9f9;border-color:#9b9b9b;text-align:center;vertical-align:middle}
+</style>
+<table class="tg">
+<tbody>
+  <tr>
+    <td class="tg-bgm4" rowspan="2">Case</td>
+    <td class="tg-bgm4" rowspan="2">Source audio</td>
+    <td class="tg-bgm4" rowspan="2">Target voice</td>
+    <td class="tg-bgm4" colspan="3">Converted audio</td>
+  </tr>
+  <tr>
+    <td class="tg-duar">Propose</td>
+    <td class="tg-duar">AGAIN-VC</td>
+    <td class="tg-duar">AdaIN-VC</td>
+  </tr>
+  <tr>
+    <td class="tg-6k0d">Male to Male</td>
+    <td class="tg-6k0d">
+      <audio controls>
+        <source src="./audioforpaper\u2u\source\p316_002.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-6k0d">
+      <audio controls>
+        <source src="./audioforpaper\u2u\target\p347_004.wav" type="audio/wav">
+      </audio>    
+    </td>
+    <td class="tg-6k0d">
+      <audio controls>
+        <source src="./audioforpaper\u2u\U2VC\p316_002_to_p347_004.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-6k0d">
+      <audio controls>
+        <source src="./audioforpaper\u2u\AGAINVC\p316_002_to_p347_004.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-1fos">
+      <audio controls>
+        <source src="./audioforpaper\u2u\AdaIN-VC\p316_002_to_p347_004.wav" type="audio/wav">
+      </audio>
+    </td>
+  </tr>
+  <tr>
+    <td class="tg-1fos">Male to Female</td>
+    <td class="tg-1fos">
+      <audio controls>
+        <source src="./audioforpaper\u2u\source\p315_004.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-1fos">
+      <audio controls>
+        <source src="./audioforpaper\u2u\target\p312_002.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-1fos">
+      <audio controls>
+        <source src="./audioforpaper\u2u\U2VC\p315_004_to_p312_002.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-1fos">
+      <audio controls>
+        <source src="./audioforpaper\u2u\AGAINVC\p315_004_to_p312_002.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-1fos">
+      <audio controls>
+        <source src="./audioforpaper\u2u\AdaIN-VC\p315_004_to_p312_002.wav" type="audio/wav">
+      </audio>
+    </td>
+  </tr>
+  <tr>
+    <td class="tg-6k0d">Female to Male</td>
+    <td class="tg-6k0d">
+      <audio controls>
+        <source src="./audioforpaper\u2u\source\p362_004.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-6k0d">
+      <audio controls>
+        <source src="./audioforpaper\u2u\target\p360_010.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-6k0d">
+      <audio controls>
+        <source src="./audioforpaper\u2u\U2VC\p362_004_to_p360_010.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-6k0d">
+      <audio controls>
+        <source src="./audioforpaper\u2u\AGAINVC\p362_004_to_p360_010.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-1fos">
+      <audio controls>
+        <source src="./audioforpaper\u2u\AdaIN-VC\p362_004_to_p360_010.wav" type="audio/wav">
+      </audio>
+    </td>
+  </tr>
+  <tr>
+    <td class="tg-1fos">Female to Female</td>
+    <td class="tg-1fos">
+      <audio controls>
+        <source src="./audioforpaper\u2u\source\p314_004.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-1fos">
+      <audio controls>
+        <source src="./audioforpaper\u2u\target\p329_002.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-1fos">
+      <audio controls>
+        <source src="./audioforpaper\u2u\U2VC\p314_004_to_p329_002.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-1fos">
+      <audio controls>
+        <source src="./audioforpaper\u2u\AGAINVC\p314_004_to_p329_002.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-1fos">
+      <audio controls>
+        <source src="./audioforpaper\u2u\AdaIN-VC\p314_004_to_p329_002.wav" type="audio/wav">
+      </audio>
+    </td>
+  </tr>
+</tbody>
+</table>
+
+<h2>
+  <a id="user-content-header-2" class="anchor" href="#header-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Cross-lingual conversion</h2>
+  <p> VCC2020 corpus is used for cross-lingual conversion, Mandarin is mainly used for the evaluation because the raters are (Mandarin-English)
+    bilingual speakers. Other language samples are also shown here.<p>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-color:#ccc;border-spacing:0;}
+.tg td{background-color:#fff;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
+font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{background-color:#f0f0f0;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
+font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-duar{background-color:#f9f9f9;border-color:#9b9b9b;font-weight:bold;text-align:center;vertical-align:middle}
+.tg .tg-bgm4{border-color:#9b9b9b;font-weight:bold;text-align:center;vertical-align:middle}
+.tg .tg-6k0d{border-color:#9b9b9b;text-align:center;vertical-align:middle}
+.tg .tg-1fos{background-color:#f9f9f9;border-color:#9b9b9b;text-align:center;vertical-align:middle}
+</style>
+<table class="tg">
+<tbody>
+<tr>
+<td class="tg-bgm4" rowspan="2">Case</td>
+<td class="tg-bgm4" rowspan="2">Source audio</td>
+<td class="tg-bgm4" rowspan="2">Target voice</td>
+<td class="tg-bgm4" colspan="3">Converted audio</td>
+</tr>
+<tr>
+<td class="tg-duar">Propose</td>
+<td class="tg-duar">AGAIN-VC</td>
+<td class="tg-duar">AdaIN-VC</td>
+</tr>
+<tr>
+  <td class="tg-6k0d">Mandarin to English  </td>
+  <td class="tg-6k0d">
+    <audio controls>
+      <source src="./audioforpaper\crosslingual\source\M10006.wav" type="audio/wav">
+    </audio>
+  </td>
+  <td class="tg-6k0d">
+    <audio controls>
+      <source src="./audioforpaper\crosslingual\target\p334_012.wav" type="audio/wav">
+    </audio>
+  </td>
+  <td class="tg-6k0d">
+    <audio controls>
+      <source src="./audioforpaper\crosslingual\U2VC\M10006_to_p334_012.wav" type="audio/wav">
+    </audio>
+  </td>
+  <td class="tg-6k0d">
+    <audio controls>
+      <source src="./audioforpaper\crosslingual\AGAINVC\M10006_to_p334_012.wav" type="audio/wav">
+    </audio>
+  </td>
+  <td class="tg-1fos">
+    <audio controls>
+      <source src="./audioforpaper\crosslingual\AdaIN-VC\M10006_to_p334_012.wav" type="audio/wav">
+    </audio>
+  </td>
+  </tr>
+  <tr>
+    <td class="tg-6k0d">Mandarin to English  </td>
+    <td class="tg-6k0d">
+      <audio controls>
+        <source src="./audioforpaper\crosslingual\source\M10006.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-6k0d">
+      <audio controls>
+        <source src="./audioforpaper\crosslingual\target\p362_010.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-6k0d">
+      <audio controls>
+        <source src="./audioforpaper\crosslingual\U2VC\M10006_to_p362_010.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-6k0d">
+      <audio controls>
+        <source src="./audioforpaper\crosslingual\AGAINVC\M10006_to_p362_010.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-1fos">
+      <audio controls>
+        <source src="./audioforpaper\crosslingual\AdaIN-VC\M10006_to_p362_010.wav" type="audio/wav">
+      </audio>
+    </td>
+    </tr>
+    <tr>
+      <td class="tg-6k0d">Mandarin to English  </td>
+      <td class="tg-6k0d">
+        <audio controls>
+          <source src="./audioforpaper\crosslingual\source\M10006(cm).wav" type="audio/wav">
+        </audio>
+      </td>
+      <td class="tg-6k0d">
+        <audio controls>
+          <source src="./audioforpaper\crosslingual\target\p334_012.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td class="tg-6k0d">
+        <audio controls>
+          <source src="./audioforpaper\crosslingual\U2VC\M10006_to_p334_012(cm).wav" type="audio/wav">
+        </audio>
+      </td>
+      <td class="tg-6k0d">
+        <audio controls>
+          <source src="./audioforpaper\crosslingual\AGAINVC\M10006_to_p334_012(cm).wav" type="audio/wav">
+        </audio>
+      </td>
+      <td class="tg-1fos">
+        <audio controls>
+          <source src="./audioforpaper\crosslingual\AdaIN-VC\M10006_to_p334_012(cm).wav" type="audio/wav">
+        </audio>
+      </td>
+      </tr>
+      <tr>
+        <td class="tg-6k0d">Mandarin to English  </td>
+        <td class="tg-6k0d">
+          <audio controls>
+            <source src="./audioforpaper\crosslingual\source\M10006(cm).wav" type="audio/wav">
+          </audio>
+        </td>
+        <td class="tg-6k0d">
+          <audio controls>
+            <source src="./audioforpaper\crosslingual\target\p362_010.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td class="tg-6k0d">
+          <audio controls>
+            <source src="./audioforpaper\crosslingual\U2VC\M10006_to_p362_010(cm).wav" type="audio/wav">
+          </audio>
+        </td>
+        <td class="tg-6k0d">
+          <audio controls>
+            <source src="./audioforpaper\crosslingual\AGAINVC\M10006_to_p362_010(cm).wav" type="audio/wav">
+          </audio>
+        </td>
+        <td class="tg-1fos">
+          <audio controls>
+            <source src="./audioforpaper\crosslingual\AdaIN-VC\M10006_to_p362_010(cm).wav" type="audio/wav">
+          </audio>
+        </td>
+        </tr>        <tr>
+          <td class="tg-6k0d">English to Mandarin  </td>
+          <td class="tg-6k0d">
+            <audio controls>
+              <source src="./audioforpaper\crosslingual\source\p362_010.wav" type="audio/wav">
+            </audio>
+          </td>
+          <td class="tg-6k0d">
+            <audio controls>
+              <source src="./audioforpaper\crosslingual\target\M10006.wav" type="audio/wav">
+            </audio>
+          </td>
+          <td class="tg-6k0d">
+            <audio controls>
+              <source src="./audioforpaper\crosslingual\U2VC\p362_010_to_M10006.wav" type="audio/wav">
+            </audio>
+          </td>
+          <td class="tg-6k0d">
+            <audio controls>
+              <source src="./audioforpaper\crosslingual\AGAINVC\p362_010_to_M10006.wav" type="audio/wav">
+            </audio>
+          </td>
+          <td class="tg-1fos">
+            <audio controls>
+              <source src="./audioforpaper\crosslingual\AdaIN-VC\p362_010_to_M10006.wav" type="audio/wav">
+            </audio>
+          </td>
+          </tr>
+          <tr>
+            <td class="tg-6k0d">English to Mandarin  </td>
+            <td class="tg-6k0d">
+              <audio controls>
+                <source src="./audioforpaper\crosslingual\source\p334_012.wav" type="audio/wav">
+              </audio>
+            </td>
+            <td class="tg-6k0d">
+              <audio controls>
+                <source src="./audioforpaper\crosslingual\target\M10006.wav" type="audio/wav">
+              </audio>
+            </td>
+            <td class="tg-6k0d">
+              <audio controls>
+                <source src="./audioforpaper\crosslingual\U2VC\p334_012_to_M10006.wav" type="audio/wav">
+              </audio>
+            </td>
+            <td class="tg-6k0d">
+              <audio controls>
+                <source src="./audioforpaper\crosslingual\AGAINVC\p334_012_to_M10006.wav" type="audio/wav">
+              </audio>
+            </td>
+            <td class="tg-1fos">
+              <audio controls>
+                <source src="./audioforpaper\crosslingual\AdaIN-VC\p334_012_to_M10006.wav" type="audio/wav">
+              </audio>
+            </td>
+            </tr>
+
+
+        <tr>
+          <td class="tg-6k0d">English to Mandarin  </td>
+          <td class="tg-6k0d">
+            <audio controls>
+              <source src="./audioforpaper\crosslingual\source\p362_010.wav" type="audio/wav">
+            </audio>
+          </td>
+          <td class="tg-6k0d">
+            <audio controls>
+              <source src="./audioforpaper\crosslingual\target\M10006(cm).wav" type="audio/wav">
+            </audio>
+          </td>
+          <td class="tg-6k0d">
+            <audio controls>
+              <source src="./audioforpaper\crosslingual\U2VC\p362_010_to_M10006(cm).wav" type="audio/wav">
+            </audio>
+          </td>
+          <td class="tg-6k0d">
+            <audio controls>
+              <source src="./audioforpaper\crosslingual\AGAINVC\p362_010_to_M10006(cm).wav" type="audio/wav">
+            </audio>
+          </td>
+          <td class="tg-1fos">
+            <audio controls>
+              <source src="./audioforpaper\crosslingual\AdaIN-VC\p362_010_to_M10006(cm).wav" type="audio/wav">
+            </audio>
+          </td>
+          </tr>
+          <tr>
+            <td class="tg-6k0d">English to Mandarin  </td>
+            <td class="tg-6k0d">
+              <audio controls>
+                <source src="./audioforpaper\crosslingual\source\p334_012.wav" type="audio/wav">
+              </audio>
+            </td>
+            <td class="tg-6k0d">
+              <audio controls>
+                <source src="./audioforpaper\crosslingual\target\M10006(cm).wav" type="audio/wav">
+              </audio>
+            </td>
+            <td class="tg-6k0d">
+              <audio controls>
+                <source src="./audioforpaper\crosslingual\U2VC\p334_012_to_M10006(cm).wav" type="audio/wav">
+              </audio>
+            </td>
+            <td class="tg-6k0d">
+              <audio controls>
+                <source src="./audioforpaper\crosslingual\AGAINVC\p334_012_to_M10006(cm).wav" type="audio/wav">
+              </audio>
+            </td>
+            <td class="tg-1fos">
+              <audio controls>
+                <source src="./audioforpaper\crosslingual\AdaIN-VC\p334_012_to_M10006(cm).wav" type="audio/wav">
+              </audio>
+            </td>
+            </tr>
+
+
+
+<tr>
+<td class="tg-6k0d">Finnish to Finnish</td>
+<td class="tg-6k0d">
+  <audio controls>
+    <source src="./audioforpaper\crosslingual\source\F10016.wav" type="audio/wav">
+  </audio>
+</td>
+<td class="tg-6k0d">
+  <audio controls>
+    <source src="./audioforpaper\crosslingual\target\F10022.wav" type="audio/wav">
+  </audio>    
+</td>
+<td class="tg-6k0d">
+  <audio controls>
+    <source src="./audioforpaper\crosslingual\U2VC\F10016_to_F10022.wav" type="audio/wav">
+  </audio>
+</td>
+<td class="tg-6k0d">
+  <audio controls>
+    <source src="./audioforpaper\crosslingual\AGAINVC\F10016_to_F10022.wav" type="audio/wav">
+  </audio>
+</td>
+<td class="tg-1fos">
+  <audio controls>
+    <source src="./audioforpaper\crosslingual\AdaIN-VC\F10016_to_F10022.wav" type="audio/wav">
+  </audio>
+</td>
+</tr>
+<tr>
+<td class="tg-1fos">German to English</td>
+<td class="tg-1fos">
+  <audio controls>
+    <source src="./audioforpaper\crosslingual\source\G10003.wav" type="audio/wav">
+  </audio>
+</td>
+<td class="tg-1fos">
+  <audio controls>
+    <source src="./audioforpaper\crosslingual\target\p360_010.wav" type="audio/wav">
+  </audio>
+</td>
+<td class="tg-1fos">
+  <audio controls>
+    <source src="./audioforpaper\crosslingual\U2VC\G10003_to_p360_010.wav" type="audio/wav">
+  </audio>
+</td>
+<td class="tg-1fos">
+  <audio controls>
+    <source src="./audioforpaper\crosslingual\AGAINVC\G10003_to_p360_010.wav" type="audio/wav">
+  </audio>
+</td>
+<td class="tg-1fos">
+  <audio controls>
+    <source src="./audioforpaper\crosslingual\AdaIN-VC\G10003_to_p360_010.wav" type="audio/wav">
+  </audio>
+</td>
+</tr>
+
+  <tr>
+    <td class="tg-6k0d">Mandarin to German  </td>
+    <td class="tg-6k0d">
+      <audio controls>
+        <source src="./audioforpaper\crosslingual\source\M10012.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-6k0d">
+      <audio controls>G10030.wav
+        <source src="./audioforpaper\crosslingual\target\G10030.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-6k0d">
+      <audio controls>
+        <source src="./audioforpaper\crosslingual\U2VC\M10012_to_G10030.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-6k0d">
+      <audio controls>
+        <source src="./audioforpaper\crosslingual\AGAINVC\M10012_to_G10030.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-1fos">
+      <audio controls>
+        <source src="./audioforpaper\crosslingual\AdaIN-VC\M10012_to_G10030.wav" type="audio/wav">
+      </audio>
+    </td>
+    </tr>
+    <tr>
+      <td class="tg-6k0d">English to Finnish  </td>
+      <td class="tg-6k0d">
+        <audio controls>
+          <source src="./audioforpaper\crosslingual\source\p225_002.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td class="tg-6k0d">
+        <audio controls>
+          <source src="./audioforpaper\crosslingual\target\F10009.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td class="tg-6k0d">
+        <audio controls>
+          <source src="./audioforpaper\crosslingual\U2VC\p225_002_to_F10009.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td class="tg-6k0d">
+        <audio controls>
+          <source src="./audioforpaper\crosslingual\AGAINVC\p225_002_to_F10009.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td class="tg-1fos">
+        <audio controls>
+          <source src="./audioforpaper\crosslingual\AdaIN-VC\p225_002_to_F10009.wav" type="audio/wav">
+        </audio>
+      </td>
+      </tr>
+<!-- <tr>
+<td class="tg-1fos">Female to Female</td>
+<td class="tg-1fos">
+  <audio controls>
+    <source src="./selected/unseen_ff/p229_001.wav" type="audio/wav">
+  </audio>
+</td>
+<td class="tg-1fos">
+  <audio controls>
+    <source src="./selected/unseen_ff/p230_003.wav" type="audio/wav">
+  </audio>
+</td>
+<td class="tg-1fos">
+  <audio controls>
+    <source src="./selected/unseen_ff/p229_001_p230_003_propose.wav" type="audio/wav">
+  </audio>
+</td>
+<td class="tg-1fos">
+  <audio controls>
+    <source src="./selected/unseen_ff/p229_001_p230_003_base.wav" type="audio/wav">
+  </audio>
+</td>
+</tr> -->
+</tbody>
+</table>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/jasonlong/cayman-theme">Cayman</a> is maintained by <a href="https://github.com/tjulfk">Fangkun Liu</a>.</span>
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+
+    </section>
+
+  </body>
+</html>
